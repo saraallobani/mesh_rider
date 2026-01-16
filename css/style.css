@@ -1,0 +1,112 @@
+:root {
+    --dark-blue: #2c3e50;
+    --orange: #f39c12;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    background-color: var(--light-gray);
+}
+
+
+nav {
+    background-color: var(--dark-blue);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+    color: var(--white);
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.openbtn {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.openbtn:hover { background-color: #e67e22; }
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    background-color: var(--dark-blue);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--white);
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    text-align: right;
+}
+
+.sidebar a:hover { background-color: var(--orange); }
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 36px;
+}
+
+.hero {
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 5%;
+}
+
+.card {
+    background: var(--white);
+    width: 320px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-bottom: 6px solid var(--orange);
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    background-color: var(--orange);
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+}
