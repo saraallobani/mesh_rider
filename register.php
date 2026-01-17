@@ -14,8 +14,7 @@ if (isset($_POST['register'])) {
         $sql = "INSERT INTO users (full_name, email, password, phone, role) 
                 VALUES ('$full_name', '$email', '$password', '$phone', 'user')";
         if (mysqli_query($conn, $sql)) {
-            header("Location: login.php?msg=success");
-            exit();
+            $success = "✅ تم إنشاء الحساب بنجاح";
         }
     }
 }
@@ -35,7 +34,16 @@ if (isset($_POST['register'])) {
     <?php include 'includes/header.php'; ?>
     <div class="auth-box">
         <h2 style="text-align:center; color:var(--dark-blue);">إنشاء حساب جديد 👤</h2>
-        <?php if(isset($error)) echo "<p style='color:red; text-align:center;'>$error</p>"; ?>
+
+        <?php
+        if (isset($success)) {
+            echo "<p style='color:green; text-align:center;'>$success</p>";
+        }
+        if (isset($error)) {
+            echo "<p style='color:red; text-align:center;'>$error</p>";
+        }
+        ?>
+
         <form method="POST">
             <input type="text" name="full_name" placeholder="الاسم الكامل" required>
             <input type="email" name="email" placeholder="البريد الإلكتروني" required>
