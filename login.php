@@ -1,6 +1,8 @@
 <?php
+session_start(); 
 include 'includes/db.php';
 
+$error = ''; 
 
 if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -16,7 +18,7 @@ if (isset($_POST['login'])) {
         header("Location: index.php");
         exit();
     } else {
-        $error = "الإيميل أو كلمة المرور غلط!";
+        $error = "البريد الإلكتروني أو كلمة المرور خاطئ!";
     }
 }
 ?>
@@ -31,6 +33,11 @@ if (isset($_POST['login'])) {
     <?php include 'includes/header.php'; ?>
     <div class="auth-box" style="max-width: 400px; margin: 80px auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
         <h2 style="text-align:center; color:var(--dark-blue);">أهلاً بك مجدداً 👋</h2>
+
+        <?php if(!empty($error)) : ?>
+            <p style="color:red; text-align:center; margin-bottom:15px;"><?php echo $error; ?></p>
+        <?php endif; ?>
+
         <form method="POST">
             <input type="email" name="email" placeholder="البريد الإلكتروني" required style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px;">
             <input type="password" name="password" placeholder="كلمة المرور" required style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px;">
