@@ -64,7 +64,8 @@
             color: var(--dark-blue);
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 12px;
             border: 2px solid #eee;
@@ -73,7 +74,8 @@
             font-family: inherit;
         }
 
-        .form-group input:focus, .form-group textarea:focus {
+        .form-group input:focus,
+        .form-group textarea:focus {
             border-color: var(--orange);
             outline: none;
         }
@@ -94,82 +96,89 @@
 </head>
 <body>
 
-    <?php include 'includes/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
-    <div class="hero">
-        <h1>إحنا دايماً معك 📞</h1>
-        <p>عندك استفسار؟ حابب تنسق رحلة خاصة؟ تواصل معنا الآن</p>
-    </div>
+<div class="hero">
+    <h1>إحنا دايماً معك 📞</h1>
+    <p>عندك استفسار؟ حابب تنسق رحلة خاصة؟ تواصل معنا الآن</p>
+</div>
 
-    <div class="contact-wrapper">
-        
-        <div class="contact-info">
-            <h2>معلومات التواصل</h2>
-            <p>لا تتردد في الاتصال بنا، فريقنا جاهز للرد عليك على مدار الساعة.</p>
-            
-            <div class="info-card">
-                <div class="icon">📍</div>
-                <div>
-                    <h4>موقعنا</h4>
-                    <p>عمان، شارع الرينبو، مجمع رقم 45</p>
-                </div>
-            </div>
+<div class="contact-wrapper">
 
-            <div class="info-card">
-                <div class="icon">📞</div>
-                <div>
-                    <h4>الهاتف</h4>
-                    <p>079 000 0000</p>
-                </div>
-            </div>
+    <div class="contact-info">
+        <h2>معلومات التواصل</h2>
+        <p>لا تتردد في الاتصال بنا، فريقنا جاهز للرد عليك على مدار الساعة.</p>
 
-            <div class="info-card" style="cursor: pointer;" onclick="window.open('https://wa.me/962790000000')">
-                <div class="icon" style="background: #25D366;">💬</div>
-                <div>
-                    <h4>واتساب</h4>
-                    <p>تواصل سريع ومباشر</p>
-                </div>
-            </div>
-
-            <div class="info-card">
-                <div class="icon">✉️</div>
-                <div>
-                    <h4>البريد الإلكتروني</h4>
-                    <p>support@meshrider.com</p>
-                </div>
+        <div class="info-card">
+            <div class="icon">📍</div>
+            <div>
+                <h4>موقعنا</h4>
+                <p>عمان، شارع الرينبو، مجمع رقم 45</p>
             </div>
         </div>
 
-        <div class="contact-form">
-            <h2 style="color: var(--dark-blue); margin-top: 0;">أرسل لنا رسالة</h2>
-            <form action="#">
-                <div class="form-group">
-                    <label>الاسم بالكامل</label>
-                    <input type="text" placeholder="مثال: زيد علي" required>
-                </div>
-                <div class="form-group">
-                    <label>البريد الإلكتروني</label>
-                    <input type="email" placeholder="example@mail.com" required>
-                </div>
-                <div class="form-group">
-                    <label>موضوع الرسالة</label>
-                    <input type="text" placeholder="استفسار عن رحلة، شكوى، حجز خاص" required>
-                </div>
-                <div class="form-group">
-                    <label>رسالتك</label>
-                    <textarea rows="5" placeholder="اكتب تفاصيل استفسارك هنا..." required></textarea>
-                </div>
-                <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">إرسال الرسالة</button>
-            </form>
+        <div class="info-card">
+            <div class="icon">📞</div>
+            <div>
+                <h4>الهاتف</h4>
+                <p>079 000 0000</p>
+            </div>
+        </div>
+
+        <div class="info-card" style="cursor: pointer;" onclick="window.open('https://wa.me/962790000000')">
+            <div class="icon" style="background: #25D366;">💬</div>
+            <div>
+                <h4>واتساب</h4>
+                <p>تواصل سريع ومباشر</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="icon">✉️</div>
+            <div>
+                <h4>البريد الإلكتروني</h4>
+                <p>support@meshrider.com</p>
+            </div>
         </div>
     </div>
 
-    <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m3!1d3384.6224151740!2d35.9284!3d31.9539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDU3JzE0LjAiTiAzNcKwNTUnNDIuMiJF!5e0!3m2!1sar!2sjo!4v1642150000000!5m2!1sar!2sjo" 
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+    <div class="contact-form">
+        <h2 style="color: var(--dark-blue); margin-top: 0;">أرسل لنا رسالة</h2>
+        <form action="#">
+            <div class="form-group">
+                <label>الاسم بالكامل</label>
+                <input type="text" placeholder="مثال: زيد علي" required>
+            </div>
+            <div class="form-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label>موضوع الرسالة</label>
+                <input type="text" placeholder="استفسار عن رحلة، شكوى، حجز خاص" required>
+            </div>
+            <div class="form-group">
+                <label>رسالتك</label>
+                <textarea rows="5" placeholder="اكتب تفاصيل استفسارك هنا..." required></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">
+                إرسال الرسالة
+            </button>
+        </form>
     </div>
+
+</div>
+
+<div class="map-container">
+    <iframe
+        src="https://www.google.com/maps?q=31.9539,35.9284&z=15&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
 
 </body>
 </html>
