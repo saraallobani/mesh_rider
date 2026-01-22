@@ -120,7 +120,6 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : "رحالة";
             <h3 style="margin-bottom: 20px; color: var(--dark-blue);"><i class="fas fa-compass"></i> رحلات نوصي بها</h3>
             
             <?php
-            // عرض أول 4 رحلات من الداتا بيس
             $res = mysqli_query($conn, "SELECT * FROM trips LIMIT 4");
             while($row = mysqli_fetch_assoc($res)) {
                 echo "
